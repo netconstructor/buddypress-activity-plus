@@ -1,4 +1,4 @@
-=== BuddyPress Activity Plus ===
+=== BuddyPress Activity Plus (TK version) ===
 Contributors: WPMUDEV
 Tags: BuddyPress, activity, embed, media, youtube, photos, facebook
 Requires at least: 3.1

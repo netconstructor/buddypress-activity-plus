@@ -1,12 +1,11 @@
 <?php
 /*
-Plugin Name: BuddyPress Activity Plus
-Plugin URI: http://premium.wpmudev.org/project/media-embeds-for-buddypress-activity
+Plugin Name: BuddyPress Activity Plus (TK Version)
+Plugin URI: https://github.com/Themekraft/buddypress-activity-plus
 Description: A Facebook-style media sharing improvement for the activity box.
 Version: 1.3.1
-Author: Ve Bailovity (Incsub), designed by Brett Sirianni (The Edge)
+Author: Ve Bailovity (Incsub), designed by Brett Sirianni (The Edge), Sven Wagener (mahype)
 Author URI: http://premium.wpmudev.org
-WDP ID: 232
 
 Copyright 2009-2011 Incsub (http://incsub.com)
 
@@ -33,23 +32,20 @@ if (is_multisite() && defined('WPMU_PLUGIN_URL') && defined('WPMU_PLUGIN_DIR') &
 	define ('BPFB_PLUGIN_LOCATION', 'mu-plugins', true);
 	define ('BPFB_PLUGIN_BASE_DIR', WPMU_PLUGIN_DIR, true);
 	define ('BPFB_PLUGIN_URL', WPMU_PLUGIN_URL, true);
-	$textdomain_handler = 'load_muplugin_textdomain';
 } else if (defined('WP_PLUGIN_URL') && defined('WP_PLUGIN_DIR') && file_exists(WP_PLUGIN_DIR . '/' . BPFB_PLUGIN_SELF_DIRNAME . '/' . basename(__FILE__))) {
 	define ('BPFB_PLUGIN_LOCATION', 'subfolder-plugins', true);
 	define ('BPFB_PLUGIN_BASE_DIR', WP_PLUGIN_DIR . '/' . BPFB_PLUGIN_SELF_DIRNAME, true);
 	define ('BPFB_PLUGIN_URL', WP_PLUGIN_URL . '/' . BPFB_PLUGIN_SELF_DIRNAME, true);
-	$textdomain_handler = 'load_plugin_textdomain';
 } else if (defined('WP_PLUGIN_URL') && defined('WP_PLUGIN_DIR') && file_exists(WP_PLUGIN_DIR . '/' . basename(__FILE__))) {
 	define ('BPFB_PLUGIN_LOCATION', 'plugins', true);
 	define ('BPFB_PLUGIN_BASE_DIR', WP_PLUGIN_DIR, true);
 	define ('BPFB_PLUGIN_URL', WP_PLUGIN_URL, true);
-	$textdomain_handler = 'load_plugin_textdomain';
 } else {
 	// No textdomain is loaded because we can't determine the plugin location.
 	// No point in trying to add textdomain to string and/or localizing it.
 	wp_die(__('There was an issue determining where Google Maps plugin is installed. Please reinstall.'));
 }
-$textdomain_handler('bpfb', false, BPFB_PLUGIN_SELF_DIRNAME . '/languages/');
+load_plugin_textdomain( 'bpfb', false, BPFB_PLUGIN_SELF_DIRNAME . '/languages/' );
 
 // Override oEmbed width in wp-config.php
 if (!defined('BPFB_OEMBED_WIDTH')) define('BPFB_OEMBED_WIDTH', 450, true);

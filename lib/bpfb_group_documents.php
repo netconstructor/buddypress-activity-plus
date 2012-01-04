@@ -28,7 +28,7 @@ function bpfb_documents_add_cssjs_hooks_handler () {
 	add_action('wp_print_scripts', 'bpfb_documents_add_js_globals');
 	wp_enqueue_script('bpfb_group_documents', BPFB_PLUGIN_URL . '/js/bpfb_group_documents.js', array('bpfb_interface_script'));
 	wp_localize_script('bpfb_group_documents', 'l10nBpfbDocs', array(
-		'add_documents' => __('Add documents', 'bpfb'),
+		'add_documents' => __('Post', 'bpfb'),
 		'no_group_selected' => __('Please select a group to upload to', 'bpfb'),
 	));
 }

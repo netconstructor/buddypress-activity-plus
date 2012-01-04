@@ -231,7 +231,7 @@ var BpfbPhotoHandler = function () {
 	var createMarkup = function () {
 		var html = '<div id="bpfb_tmp_photo"> </div>' +
 			'<ul id="bpfb_tmp_photo_list"></ul>' + 
-			'<input type="button" id="bpfb_add_remote_image" value="' + l10nBpfb.add_remote_image + '" /><div id="bpfb_remote_image_container"></div>' +
+			'<!--<input type="button" id="bpfb_add_remote_image" value="' + l10nBpfb.add_remote_image + '" /><div id="bpfb_remote_image_container"></div>-->' +
 			'<input type="button" id="bpfb_remote_image_preview" value="' + l10nBpfb.preview + '" />';
 		$container.append(html);
 		
